@@ -1,0 +1,15 @@
+.cv-overlay { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 1rem; background: rgba(5, 6, 20, 0.7); backdrop-filter: blur(6px); animation: cvFade 0.2s ease; }
+.cv-modal { position: relative; width: min(560px, 100%); padding: 2rem; background: var(--bg); }
+.cv-modal:hover { transform: none; }
+.cv-modal h3 { font-size: 1.3rem; margin-bottom: 0.3rem; }
+.cv-sub { color: var(--muted); margin-bottom: 1.3rem; }
+.cv-close { position: absolute; top: 0.7rem; right: 0.9rem; font-size: 1.6rem; line-height: 1; color: var(--muted); background: none; border: 0; cursor: pointer; }
+.cv-close:hover { color: var(--text); }
+.cv-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.cv-choice { display: flex; flex-direction: column; gap: 0.35rem; padding: 1.2rem; border-radius: 16px; background: var(--card); border: 1px solid var(--border); transition: 0.25s; }
+.cv-choice:hover { transform: translateY(-3px); border-color: var(--a2); box-shadow: 0 14px 30px -14px var(--glow); }
+.cv-ico { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; color: #fff; background: var(--grad); font-weight: 700; margin-bottom: 0.4rem; }
+.cv-choice small { color: var(--muted); }
+.cv-choice em { margin-top: 0.5rem; font-style: normal; font-weight: 600; font-size: 0.85rem; color: var(--a2); }
+@keyframes cvFade { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 520px) { .cv-choices { grid-template-columns: 1fr; } }
